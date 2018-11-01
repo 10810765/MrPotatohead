@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
         CheckBox checkbox = (CheckBox) v;
 
+        // Get resource string name
         String potatoPlaceholder = checkbox.getText().toString();
 
         // Get resource ID by using the resources string name.
