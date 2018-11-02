@@ -21,11 +21,11 @@ public class MainActivity extends AppCompatActivity {
         CheckBox checkbox = (CheckBox) v;
 
         // Get resource string name
-        String potatoPlaceholder = checkbox.getText().toString();
+        String potatoVar = checkbox.getText().toString();
 
         // Get resource ID by using the resources string name.
         // Source: https://android.okhelp.cz/get-resource-id-by-resources-string-name-android-example/
-        int resourceID = getResources().getIdentifier(potatoPlaceholder, "id", getPackageName());
+        int resourceID = getResources().getIdentifier(potatoVar, "id", getPackageName());
         ImageView potatoImage = findViewById(resourceID);
 
         // Hide or show image
