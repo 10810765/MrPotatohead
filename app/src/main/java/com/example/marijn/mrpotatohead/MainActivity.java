@@ -2,7 +2,6 @@ package com.example.marijn.mrpotatohead;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.ImageView;
@@ -11,6 +10,8 @@ public class MainActivity extends AppCompatActivity {
 
     // Create a list with all Mr Potatohead parts
     String[] dressPotato = {"arms", "ears", "eyebrows", "eyes", "glasses", "hat", "mouth", "mustache", "nose", "shoes"};
+    String[] checkBoxes = {"checkArms", "checkEars", "checkEyebrows", "checkEyes", "checkGlasses", "checkHat", "checkMouth", "checkMustache", "checkNose", "checkShoes"};
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +36,20 @@ public class MainActivity extends AppCompatActivity {
             int resourceID = getResources().getIdentifier(bodyP, "id", getPackageName());
             ImageView image = findViewById(resourceID);
             outState.putInt(bodyP, image.getVisibility());
+        }
+    }
+
+    // On reset button clicked, reset checkboxes and image views
+    public void resetClicked(View v) {
+        for (String bodyP : dressPotato) {
+            int resourceID = getResources().getIdentifier(bodyP, "id", getPackageName());
+            ImageView image = findViewById(resourceID);
+            image.setVisibility(View.INVISIBLE);
+        }
+        for (String checkB : checkBoxes) {
+            int resourceID = getResources().getIdentifier(checkB, "id", getPackageName());
+            CheckBox checkBox = findViewById(resourceID);
+            checkBox.setChecked(false);
         }
     }
 

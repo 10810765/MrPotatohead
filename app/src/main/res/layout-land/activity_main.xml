@@ -4,17 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteY="25dp">
 
     <android.support.v7.widget.GridLayout
         android:id="@+id/gridLayout"
-        android:layout_width="188dp"
-        android:layout_height="160dp"
-        android:layout_marginStart="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.455"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/frameLayout">
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/frameLayout"
+        app:layout_constraintTop_toTopOf="parent"
+        app:orientation="vertical">
 
         <CheckBox
             android:id="@+id/checkArms"
@@ -120,18 +123,20 @@
 
     <FrameLayout
         android:id="@+id/frameLayout"
-        android:layout_width="wrap_content"
-        android:layout_height="300dp"
-        app:layout_constraintBottom_toTopOf="@+id/gridLayout"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/gridLayout"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/body"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:adjustViewBounds="false"
             android:contentDescription="@PotatoBody"
             app:layout_column="2"
@@ -140,7 +145,7 @@
 
         <ImageView
             android:id="@+id/arms"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@PotatoArms"
             android:visibility="invisible"
@@ -148,7 +153,7 @@
 
         <ImageView
             android:id="@+id/ears"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@PotatoEars"
             android:visibility="invisible"
@@ -156,7 +161,7 @@
 
         <ImageView
             android:id="@+id/eyebrows"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@PotatoEyebrows"
             android:visibility="invisible"
@@ -164,7 +169,7 @@
 
         <ImageView
             android:id="@+id/eyes"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@PotatoEyes"
             android:visibility="invisible"
@@ -172,7 +177,7 @@
 
         <ImageView
             android:id="@+id/glasses"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@PotatoGlasses"
             android:visibility="invisible"
@@ -180,7 +185,7 @@
 
         <ImageView
             android:id="@+id/hat"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@PotatoHat"
             android:visibility="invisible"
@@ -188,7 +193,7 @@
 
         <ImageView
             android:id="@+id/mouth"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@PotatoMouth"
             android:visibility="invisible"
@@ -196,7 +201,7 @@
 
         <ImageView
             android:id="@+id/mustache"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@PotatoMustache"
             android:visibility="invisible"
@@ -204,7 +209,7 @@
 
         <ImageView
             android:id="@+id/nose"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@PotatoNose"
             android:visibility="invisible"
@@ -212,8 +217,8 @@
 
         <ImageView
             android:id="@+id/shoes"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:contentDescription="@PotatoShoes"
             android:visibility="invisible"
             app:srcCompat="@drawable/shoes" />
@@ -224,13 +229,16 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_margin="0dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         android:onClick="resetClicked"
         android:text="Reset"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/frameLayout"
         app:layout_constraintTop_toBottomOf="@+id/gridLayout" />
 
 </android.support.constraint.ConstraintLayout>
