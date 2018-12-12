@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // If there is a saved instance, reload these states
+        // If there are previously saved instance states, restore these states
         if (savedInstanceState == null) {
             return;
         } else {
