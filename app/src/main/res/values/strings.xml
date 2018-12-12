@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">MrPotatohead</string>
+    <string name="arms">arms</string>
+    <string name="mustache">mustache</string>
+    <string name="mouth">mouth</string>
+    <string name="hat">hat</string>
+    <string name="glasses">glasses</string>
+    <string name="ears">ears</string>
+    <string name="eyebrows">eyebrows</string>
+    <string name="eyes">eyes</string>
+    <string name="nose">nose</string>
+    <string name="shoes">shoes</string>
+    <string name="reset">Reset</string>
 </resources>
