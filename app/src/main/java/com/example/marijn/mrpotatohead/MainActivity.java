@@ -47,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
     // On reset button clicked, reset checkboxes and set image views invisible
     public void resetClicked(View v) {
         for (String potatoP : mrPotatoParts) {
+
             // Reset image visibility
             int imageID = getResources().getIdentifier(potatoP, "id", getPackageName());
             ImageView image = findViewById(imageID);
