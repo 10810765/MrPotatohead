@@ -4,4 +4,5 @@ This course is part of the minor programming at the UvA.
 
 By: Marijn Meijering - 10810765
 
-![App Potatohead](https://github.com/10810765/MrPotatohead/blob/master/doc/potatoApp.png)
+![App1 MrPotatohead](https://github.com/10810765/MrPotatohead/blob/master/doc/MrPotatohead_1.png)
+![App2 MrPotatohead](https://github.com/10810765/MrPotatohead/blob/master/doc/MrPotatohead_2.png)
